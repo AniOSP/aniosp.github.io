@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <template v-if="pending">
-    </template>
-    <template v-else>
-      <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content flex-col">
-          <h1 class="text-5xl font-bold">{{ findDevice.name }}</h1>
-          <p>{{ findDevice.codename }}</p>
-          <a :href="otaFile.url"><button class="btn btn-primary">Download</button></a>
-        </div>
-      </div>
-    </template>
-  </div>
+	<div>
+		<template v-if="pending">
+		</template>
+		<template v-else>
+			<div class="hero min-h-screen bg-base-200">
+				<div class="hero-content flex-col">
+					<h1 class="text-5xl font-bold">{{ findDevice.name }}</h1>
+					<p>{{ findDevice.codename }}</p>
+					<a :href="otaFile.url"><button class="btn btn-primary">Download</button></a>
+				</div>
+			</div>
+		</template>
+	</div>
 </template>
 
 <script setup>
@@ -25,10 +25,10 @@ const findDevice = objectDevices.find((device) => device.codename === route.para
 const { pending, data: otaFile } = useLazyFetch(findDevice.ota);
 
 onBeforeMount(() => {
-  if (!findDevice) {
-    return navigateTo({
-      path: '/404'
-    });
-  }
+	if (!findDevice) {
+		return navigateTo({
+			path: '/404'
+		});
+	}
 });
 </script>
