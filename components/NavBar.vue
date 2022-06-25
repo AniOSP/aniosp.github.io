@@ -14,15 +14,15 @@
 				<div class="navbar-end">
 					<div class="flex-none">
 						<ul class="menu menu-horizontal bg-base-100 rounded-box p-2">
-							<li v-if="isHome()"><a href="/#home">Home</a></li>
+							<li v-if="isHome()"><a href="#home">Home</a></li>
 							<li v-else>
-								<NuxtLink to="/">Home</NuxtLink>
+								<a href="/">Home</a>
 							</li>
-							<li v-if="isHome()"><a href="/#features">Features</a></li>
+							<li v-if="isHome()"><a href="#features">Features</a></li>
+							<li v-if="isHome()"><a href="#team">Team</a></li>
 							<li>
-								<NuxtLink to="/downloads">Download</NuxtLink>
+								<NuxtLink to="/downloads" id="downloads">Download</NuxtLink>
 							</li>
-							<li v-if="isHome()"><a href="/#team">Team</a></li>
 						</ul>
 					</div>
 				</div>
@@ -42,15 +42,15 @@
 			<div class="navbar-end">
 				<div class="flex-none">
 					<ul class="menu menu-horizontal bg-base-100 rounded-box p-2">
-						<li v-if="isHome()"><a href="/#home">Home</a></li>
+						<li v-if="isHome()"><a href="#home">Home</a></li>
 						<li v-else>
 							<a href="/">Home</a>
 						</li>
-						<li v-if="isHome()"><a href="/#features">Features</a></li>
+						<li v-if="isHome()"><a href="#features">Features</a></li>
+						<li v-if="isHome()"><a href="#team">Team</a></li>
 						<li>
-							<NuxtLink to="/downloads">Download</NuxtLink>
+							<NuxtLink to="/downloads" id="downloads">Download</NuxtLink>
 						</li>
-						<li v-if="isHome()"><a href="/#team">Team</a></li>
 					</ul>
 				</div>
 			</div>
@@ -73,8 +73,45 @@ export default {
 		}
 	},
 	mounted() {
-		gsap.to(this.$el.querySelector('#animated'), { duration: 1, ease: 'power1.out', y: '100vh' })
-			.then(() => this.animationComplete = true);
+		gsap.to(this.$el.querySelector('#animated'), { duration: 1, ease: 'power1.out', y: '100vh' }).then(() => {
+			this.animationComplete = true;
+
+			// I dunno why but it only works if i add this to the code lol
+			setTimeout(() => {
+				if (this.$route.path === '/') {
+					document.querySelectorAll('a[href*="#"]').forEach((el) => {
+						if (el.getAttribute('href').includes(this.$route.hash)) {
+							el.classList.add('active');
+						}
+					});
+				} else if (this.$route.path === '/downloads') {
+					document.querySelectorAll('#downloads').forEach((el) => {
+						el.classList.add('active');
+					});
+				}
+			}, 0);
+		});
+	},
+	watch: {
+		$route(to, from) {
+			if (to.path === '/') {
+				document.querySelectorAll('a[href*="#"]').forEach((el) => {
+					if (el.getAttribute('href').includes(to.hash)) {
+						el.classList.add('active');
+					}
+
+					if (el.classList.contains('active') && el.getAttribute('href').includes(from.hash)) {
+						el.classList.remove('active');
+					}
+				});
+			} else if (to.path === '/downloads') {
+				setTimeout(() => {
+					document.querySelectorAll('#downloads').forEach((el) => {
+						el.classList.add('active');
+					});
+				}, 0);
+			}
+		},
 	}
 }
 </script>

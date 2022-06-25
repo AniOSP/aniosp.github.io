@@ -60,7 +60,7 @@
 			</div>
 		</div>
 
-		<div class="hero min-h-screen bg-base-200 max-w-screen" id="team">
+		<div class="hero min-h-screen bg-base-200 max-w-screen no-snap" id="team">
 			<div class="hero-content text-center" id="team-content" style="position: relative; left: -100vw">
 				<div class="max-w">
 					<h1 class="text-5xl font-bold">Developer Team</h1>
@@ -183,9 +183,6 @@ export default {
 				gsap.to(team, { duration: 1, ease: "power1.out", x: "100vw" });
 			}
 		},
-		activated() {
-			this.observeSections();
-		},
 	},
 }
 </script>
@@ -195,9 +192,19 @@ html {
 	scroll-behavior: smooth;
 	overflow: scroll;
 	overflow-x: hidden;
+	scroll-snap-type: y proximity;
 }
 
 ::-webkit-scrollbar {
 	display: none;
+}
+
+.hero {
+	scroll-snap-align: start;
+}
+
+.no-snap {
+	scroll-snap-type: unset;
+	scroll-snap-align: unset;
 }
 </style>
