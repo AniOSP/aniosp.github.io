@@ -26,8 +26,7 @@
 									</h1>
 								</div>
 								<p>AniOSP comes stock with Google Pixel-exclusive goodies, giving you a stock, yet feature-rich
-									android
-									experience.</p>
+									android experience.</p>
 							</div>
 						</div>
 

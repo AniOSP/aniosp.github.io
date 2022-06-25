@@ -21,5 +21,7 @@ export default defineNuxtConfig({
 			'gasp',
 		],
 	},
-	css: ['@fortawesome/fontawesome-svg-core/styles.css']
+	css: ['@fortawesome/fontawesome-svg-core/styles.css'],
+	ssr: false,
+	target: 'static',
 });
