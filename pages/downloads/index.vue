@@ -7,11 +7,11 @@
 					<p class="py-3 mt-1">Search for your device to find the latest release!</p>
 				</div>
 				<div class="w-screen flex">
-					<input type="text" placeholder="Type here" class="input input-bordered w-11/12 mt-10 mx-20" />
+					<input type="text" placeholder="Type here" class="input input-bordered w-11/12 mt-10 mx-20" v-model="input" />
 				</div>
 
 				<div class="mt-10 mx-20">
-					<template v-for="device in objectDevices">
+					<template v-for="device in filterObjects()" :key="device.codename">
 						<template v-if="device.avail">
 							<div class="card w-96 bg-base-100 shadow-xl">
 								<div class="card-body">
@@ -36,4 +36,12 @@
 const devices = await useFetch('https://raw.githubusercontent.com/AniOSP/api/main/devices.json');
 const jsonDevices = devices.data.value;
 const objectDevices = JSON.parse(jsonDevices);
+
+const input = ref("");
+
+function filterObjects() {
+	return objectDevices.filter((device) => {
+		return device.codename.toLowerCase().includes(input.value.toLowerCase()) || device.name.toLowerCase().includes(input.value.toLowerCase());
+	});
+}
 </script>
