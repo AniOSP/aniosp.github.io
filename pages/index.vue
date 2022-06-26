@@ -20,7 +20,7 @@
 						<div class="card w-96 bg-base-100 shadow-xl flex-1">
 							<div class="card-body">
 								<div class="flex justify-center space-x-2 card-title text-3xl">
-									<FontAwesomeIcon icon="fa-brands fa-google" />
+									<BrandGoogleIcon />
 									<h1>
 										Pixel Goodies!
 									</h1>
@@ -33,7 +33,7 @@
 						<div class="card w-96 bg-base-100 shadow-xl flex-1">
 							<div class="card-body">
 								<div class="flex justify-center space-x-2 card-title text-3xl">
-									<FontAwesomeIcon icon="fa-solid fa-user-check" />
+									<UserCheckIcon />
 									<h1>
 										User friendliness
 									</h1>
@@ -46,7 +46,7 @@
 						<div class="card w-96 bg-base-100 shadow-xl flex-1">
 							<div class="card-body">
 								<div class="flex justify-center space-x-2 card-title text-3xl">
-									<FontAwesomeIcon icon="fa-solid fa-paint-roller" />
+									<PaintIcon />
 									<h1>
 										Customizable
 									</h1>
@@ -76,9 +76,9 @@
 							<h1 class="text-2xl">Relms</h1>
 							<p class="py-6">Lead Developer</p>
 							<button class="btn btn-square btn-disabled">
-								<FontAwesomeIcon icon="fa-brands fa-paypal" />
+								<BrandPaypalIcon />
 							</button>
-							<p class="py-6 text-xs">Not acepting donations</p>
+							<p class="py-6 text-xs">Not accepting donations</p>
 						</div>
 
 						<div class="flex-1 justify-center w-96">
@@ -90,9 +90,9 @@
 
 							<h1 class="text-2xl">ech0devv</h1>
 							<p class="py-6">Lead Website &amp; Graphics designer</p>
-							<a href="https://paypal.me/echodoesstuff?country.x=US&locale.x=en_US" target="blank"><button
-									class="btn btn-square">
-									<FontAwesomeIcon icon="fa-brands fa-paypal" />
+							<a href="https://paypal.me/echodoesstuff?country.x=US&locale.x=en_US" target="blank">
+								<button class="btn btn-square">
+									<BrandPaypalIcon />
 								</button></a>
 							<p class="py-6 text-xs">Currently accepting PayPal donations</p>
 						</div>
@@ -104,16 +104,11 @@
 </template>
 
 <script>
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faPaypal, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faUserCheck, faPaintRoller } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { gsap } from 'gsap';
-
-library.add([faPaypal, faGoogle, faUserCheck, faPaintRoller]);
+import { BrandPaypalIcon, PaintIcon, UserCheckIcon, BrandGoogleIcon } from 'vue-tabler-icons';
 
 export default {
-	components: { FontAwesomeIcon },
+	components: { BrandPaypalIcon, PaintIcon, UserCheckIcon, BrandGoogleIcon },
 	data() {
 		return {
 			isFeaturesInScreen: false,

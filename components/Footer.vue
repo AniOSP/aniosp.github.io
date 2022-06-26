@@ -1,12 +1,12 @@
 <template>
 	<footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
 		<div>
-			<div class="grid grid-flow-col gap-4">
+			<div class="grid grid-flow-col gap-4 text-2xl">
 				<a href="https://github.com/AniOSP" target="blank">
-					<FontAwesomeIcon icon="fa-brands fa-github" size="2xl" />
+					<BrandGithubIcon />
 				</a>
 				<a href="https://t.me/AniOSPUpdates" target="blank">
-					<FontAwesomeIcon icon="fa-brands fa-telegram" size="2xl" />
+					<BrandTelegramIcon />
 				</a>
 			</div>
 		</div>
@@ -17,13 +17,9 @@
 </template>
 
 <script>
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-
-library.add([faGithub, faTelegram]);
+import { BrandGithubIcon, BrandTelegramIcon } from 'vue-tabler-icons';
 
 export default {
-	components: { FontAwesomeIcon },
+	components: { BrandGithubIcon, BrandTelegramIcon },
 }
 </script>
