@@ -819,9 +819,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/tailwindcss@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "@nuxtjs/tailwindcss@npm:5.3.0"
+"@nuxtjs/tailwindcss@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "@nuxtjs/tailwindcss@npm:5.3.1"
   dependencies:
     "@nuxt/kit": "npm:^3.0.0-rc.5"
     "@nuxt/postcss8": "npm:^1.1.3"
@@ -837,7 +837,7 @@ __metadata:
     tailwind-config-viewer: "npm:^1.7.1"
     tailwindcss: "npm:^3.1.6"
     ufo: "npm:^0.8.5"
-  checksum: 87c5910c6f7e00c50788e81e15f29319983f9aa1f64879c76a9011a1bb48cd52470a5b47cefa4f177a8e25821ce407781a6b55109d82163dc431df54e8fe5289
+  checksum: d038e88e27018c89252098df0394666b3854793795ab9831b6f3380d4227d6c7a0f6882d7a77718b5c920d143b1b8b45728d3447247801b4ee4bc3dc24e6f5fc
   languageName: node
   linkType: hard
 
@@ -2360,18 +2360,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^2.19.0":
-  version: 2.19.0
-  resolution: "daisyui@npm:2.19.0"
+"daisyui@npm:^2.20.0":
+  version: 2.20.0
+  resolution: "daisyui@npm:2.20.0"
   dependencies:
     color: "npm:^4.2"
     css-selector-tokenizer: "npm:^0.8.0"
     postcss-js: "npm:^4.0.0"
-    tailwindcss: "npm:^3.0"
+    tailwindcss: "npm:^3"
   peerDependencies:
     autoprefixer: ^10.0.2
     postcss: ^8.1.6
-  checksum: abad06df7626fcd4a62087e8827436ae93584c8040339957ad56e07df2b6c00920276d028d8a268c8147624137184d05edc34f8cdd7ebc23aa0a60156b259f29
+  checksum: 2ab8b1adf617995e38ba25f559f943dc1320497b7835191feb7b1a0e9b313b46710edfac91b6da86c670adaed09b5e200d941de89fc1d63b920cceba73854abd
   languageName: node
   linkType: hard
 
@@ -6486,11 +6486,11 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@nuxtjs/color-mode": "npm:^3.1.4"
-    "@nuxtjs/tailwindcss": "npm:^5.3.0"
-    daisyui: "npm:^2.19.0"
+    "@nuxtjs/tailwindcss": "npm:^5.3.1"
+    daisyui: "npm:^2.20.0"
     gsap: "npm:^3.10.4"
     nuxt: "npm:3.0.0-rc.6"
-    vue-tabler-icons: "npm:^2.6.0"
+    vue-tabler-icons: "npm:^2.8.0"
   languageName: unknown
   linkType: soft
 
@@ -7000,7 +7000,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:*, tailwindcss@npm:^3.1.6":
+"tailwindcss@npm:*, tailwindcss@npm:^3, tailwindcss@npm:^3.1.6":
   version: 3.1.6
   resolution: "tailwindcss@npm:3.1.6"
   dependencies:
@@ -7032,41 +7032,6 @@ __metadata:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
   checksum: b4b0c439d5c3d2040187684fe23c5f746405ac941763f3efe85d8dc573518859cd2f4578c07f99666269c5c4268042cd8a32a46bf06548a7faaed6578549506e
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:^3.0":
-  version: 3.1.4
-  resolution: "tailwindcss@npm:3.1.4"
-  dependencies:
-    arg: "npm:^5.0.2"
-    chokidar: "npm:^3.5.3"
-    color-name: "npm:^1.1.4"
-    detective: "npm:^5.2.1"
-    didyoumean: "npm:^1.2.2"
-    dlv: "npm:^1.1.3"
-    fast-glob: "npm:^3.2.11"
-    glob-parent: "npm:^6.0.2"
-    is-glob: "npm:^4.0.3"
-    lilconfig: "npm:^2.0.5"
-    normalize-path: "npm:^3.0.0"
-    object-hash: "npm:^3.0.0"
-    picocolors: "npm:^1.0.0"
-    postcss: "npm:^8.4.14"
-    postcss-import: "npm:^14.1.0"
-    postcss-js: "npm:^4.0.0"
-    postcss-load-config: "npm:^3.1.4"
-    postcss-nested: "npm:5.0.6"
-    postcss-selector-parser: "npm:^6.0.10"
-    postcss-value-parser: "npm:^4.2.0"
-    quick-lru: "npm:^5.1.1"
-    resolve: "npm:^1.22.0"
-  peerDependencies:
-    postcss: ^8.0.9
-  bin:
-    tailwind: lib/cli.js
-    tailwindcss: lib/cli.js
-  checksum: 930f802809a71b2a479ae039da0cce76ddc66f218694a6ca9c313b1f891d93eb00885c6e40dd7c17922a7248fad558278b1bff1feb43c5edf7cb92ab7691da6d
   languageName: node
   linkType: hard
 
@@ -7681,10 +7646,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-tabler-icons@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "vue-tabler-icons@npm:2.6.0"
-  checksum: 321e0f43e17d45a7ef5b795923439a73535cf2effaa206865cb84a39ece95a14d626d7a1efb76e7bc316c1b68be3554af18f921fc673f2e09646d390e811908b
+"vue-tabler-icons@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "vue-tabler-icons@npm:2.8.0"
+  checksum: 884006cada32f77d0529a6bf55649d70595fd7d4885c76bb878e126a80435b9b5ee460e0b56e1ebcec9c19d7c2f2f82bb10dc176b6eae8a1a12d2182e9c081ea
   languageName: node
   linkType: hard
 

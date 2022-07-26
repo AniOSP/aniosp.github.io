@@ -8,12 +8,12 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.1.4",
-    "@nuxtjs/tailwindcss": "^5.3.0",
+    "@nuxtjs/tailwindcss": "^5.3.1",
     "nuxt": "3.0.0-rc.6"
   },
   "dependencies": {
-    "daisyui": "^2.19.0",
+    "daisyui": "^2.20.0",
     "gsap": "^3.10.4",
-    "vue-tabler-icons": "^2.6.0"
+    "vue-tabler-icons": "^2.8.0"
   }
 }
