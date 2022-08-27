@@ -15,5 +15,6 @@
     "daisyui": "^2.24.0",
     "gsap": "^3.11.0",
     "vue-tabler-icons": "^2.9.0"
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }
