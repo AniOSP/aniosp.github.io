@@ -1587,6 +1587,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"busboy@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "busboy@npm:1.6.0"
+  dependencies:
+    streamsearch: "npm:^1.1.0"
+  checksum: 4f9b97d97465ab8d7da3f9ee34129e4e92e473451547f3960224f209249b2546006c0bc66842932c0646c98247facf7f3341a20966114fadd234434e319411ad
+  languageName: node
+  linkType: hard
+
 "c12@npm:^0.2.8, c12@npm:^0.2.9":
   version: 0.2.9
   resolution: "c12@npm:0.2.9"
@@ -6595,6 +6604,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"streamsearch@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "streamsearch@npm:1.1.0"
+  checksum: 8d7c4b5046cf7ff528421d6e2ee0d8335da82a34edca4c58e2022390f4f73be1c83deeb14010bf939bb71e7990bd06367ca0382b3c6df1b932ecb1b98bb50e22
+  languageName: node
+  linkType: hard
+
 "string-width@npm:^1.0.2 || 2 || 3 || 4, string-width@npm:^4.1.0, string-width@npm:^4.2.0, string-width@npm:^4.2.3":
   version: 4.2.3
   resolution: "string-width@npm:4.2.3"
@@ -6986,9 +7002,11 @@ __metadata:
   linkType: hard
 
 "undici@npm:^5.2.0":
-  version: 5.10.0
-  resolution: "undici@npm:5.10.0"
-  checksum: 3257a5cdb39f82e097bf7c48cbd36f518a3c88e00463cd2f56d3fe59a197bf2ea49f178e6213cd2f6b7fbd0dcd21d8fc07c3d502c29d6cd1de3072f83fc8d07a
+  version: 5.19.1
+  resolution: "undici@npm:5.19.1"
+  dependencies:
+    busboy: "npm:^1.6.0"
+  checksum: 999c4ad5d08b9082b3a3e7a1e66bf3b9c08dac89ef8b9951da8e00959fafc03319028ed83f161ddb8d4e157ce6a9b6c8a50194daa64fd21dd5e493cddb039bbe
   languageName: node
   linkType: hard
 
